@@ -5,6 +5,10 @@ target/
 .kotlin
 .env
 
+auth-db-secret.yaml
+auth-service-secret.yaml
+market-local-realm.json
+
 ### IntelliJ IDEA ###
 .idea/
 *.iws

@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: auth-service-config-map
+data:
+  KC_REALM_NAME: market-local
+  KC_DB: postgres
+  KC_DB_URL: jdbc:postgresql://keycloak-postgres:5432/keycloak
+
+  KC_HTTP_RELATIVE_PATH: /kc
+  # for Tailscale: uncomment, delete KC_HOSTNAME_STRICT
+  # KC_HOSTNAME_URL: https://api-market-local.phoenix-fiordland.ts.net/kc
+  # KC_HOSTNAME_ADMIN_URL: http://localhost:8080/kc
+  # KC_HOSTNAME_STRICT_BACKCHANNEL: "false"
+  KC_HOSTNAME_STRICT: "false"
+
+  KC_HTTP_ENABLED: "true"
+  KC_PROXY_HEADERS: xforwarded
+
+  KC_HEALTH_ENABLED: "true"
+  KC_CACHE: local
