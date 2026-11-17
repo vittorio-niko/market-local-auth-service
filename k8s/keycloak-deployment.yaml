@@ -34,5 +34,5 @@ spec:
             limits:
               memory: 1Gi
             requests:
-              memory: 512Mi
+              memory: 1Gi
       restartPolicy: Always
